@@ -28,6 +28,7 @@ make
 make install
 
 # Create .profile script for runtime environment
+mkdir -p $BUILD_DIR/.profile.d/
 PROFILE_PATH="$BUILD_DIR/.profile.d/$BP_NAME.sh"
 append-env() { echo "[[ \":\$$1:\" != *\":$2:\"* ]] && export $1=\"\$$1:$2\"" >> $PROFILE_PATH; }
 
